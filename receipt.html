@@ -1,1 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upload Payment Receipt — The Lombard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<h1>Upload Payment Receipt</h1>
+<nav class="top-nav">
+<a href="index.html">Home</a>
+<a href="payments.html">Payments</a>
+<a href="units.html">Units</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="vendors.html">Vendors</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
 
+<main class="wrap">
+<form name="payment-proof" method="POST" data-netlify="true" enctype="multipart/form-data" class="card">
+<input type="hidden" name="form-name" value="payment-proof">
+<div class="grid">
+<label>Full name
+<input name="name" required placeholder="Your name">
+</label>
+<label>Apartment / Unit
+<input name="unit" required placeholder="1F / 2F / 2R">
+</label>
+</div>
+
+<div class="grid">
+<label>Payment method
+<select name="method" required>
+<option value="">Select…</option>
+<option>Zelle</option>
+<option>Cash App</option>
+<option>Card/ACH</option>
+<option>Other</option>
+</select>
+</label>
+<label>Payment date
+<input type="date" name="date" required>
+</label>
+</div>
+
+<div class="grid">
+<label>Amount (USD)
+<input type="number" step="0.01" name="amount" required placeholder="1450.00">
+</label>
+<label>Reference / Memo (optional)
+<input name="reference" placeholder="Zelle confirmation, memo, etc.">
+</label>
+</div>
+
+<label>Upload receipt (PNG/JPG/PDF)
+<input type="file" name="receipt" accept=".png,.jpg,.jpeg,.pdf" required>
+</label>
+
+<label>Notes (optional)
+<textarea name="notes" rows="3" placeholder="Anything else we should know?"></textarea>
+</label>
+
+<!-- Optional redirect after submit (uncomment when you’re ready)
+<input type="hidden" name="redirect" value="/thanks.html">
+-->
+
+<button class="btn" type="submit">Submit Receipt</button>
+</form>
+
+<p class="muted">Tip: include your name and apartment in the receipt image filename (e.g., <em>Lashea-2F-Oct2025.png</em>).</p>
+</main>
+
+<footer class="site-footer">© 2025 The Lombard • Managed by TEBATA Property Management</footer>
+</body>
+</html>
