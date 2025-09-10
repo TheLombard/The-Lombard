@@ -1,89 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Payments — The Lombard</title>
+<title>Thanks — The Lombard</title>
 <link rel="stylesheet" href="styles.css" />
+<style>
+.wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+.check { font-size: 3rem; line-height: 1; margin-bottom: .5rem; }
+.card { background:#004080; color:#fff; border-radius:10px; padding:1.25rem; }
+.btn { display:inline-block; margin-top:1rem; background:#4db8ff; color:#000; padding:.6rem 1rem; border-radius:8px; text-decoration:none; }
+.muted { opacity:.9 }
+</style>
 </head>
 <body>
-<section id="cashapp-payment" style="text-align:center; margin-top: 2em;">
-<section class="card" style="opacity: 0.6;">
-<h3>💵 Pay with Cash App — Coming Soon</h3>
-<p>We’re setting up direct payments via Cash App.</p>
-<p><strong>$TebataMgmt</strong></p>
-<img src="assets/images/cashapp-brandqr.png"
-alt="Cash App QR Placeholder"
-style="margin:1rem auto;max-width:200px;display:block;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);">
-<a class="btn" href="#" onclick="alert('Cash App payments will be available soon!')">Coming Soon</a>
-</section>
-
-<section class="card">
-<h3>🏦 Pay with Zelle — TEBATA Property Management</h3>
-<p>To pay rent via Zelle, please send funds to:</p>
-<p><strong>tebatapropertymanagement@gmail.com</strong></p>
-<a class="btn" href="mailto:tebatapropertymanagement@gmail.com?subject=Zelle%20Rent%20Payment">Send via Zelle</a>
-<p class="muted">Be sure to include your full name and apartment number (e.g., “Lashea – 2F”) in the payment note.</p>
-</section>
-<a href="index.html">Home</a>
-<a href="docs.html">Documents</a>
-<a href="maintenance.html">Maintenance</a>
-<a href="vendors.html">Vendors</a>
-<a href="contact.html">Contact</a>
-</nav>
+<header class="site-header">
+<h1>Thank You</h1>
 </header>
 
-<main class="container">
-<div class="card-grid">
-<div class="card">
-<h3>Cash App</h3>
-<p>Pay to <strong>$TebataMgmt</strong>.</p><!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payments • The Lombard</title>
-<link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><h1>Payments</h1></header>
-<nav class="top-nav">
-<a href="index.html">Home</a><a href="units.html">Units</a>
-<a href="payments.html" aria-current="page">Payments</a>
-<a href="maintenance.html">Maintenance</a><a href="vendors.html">Vendors</a><a href="contact.html">Contact</a>
-</nav>
 <main class="wrap">
-<p>You can pay rent via the methods below.</p>
-
 <div class="card">
-<h3>Zelle</h3>
-<p>Send to: <strong>your-zelle-handle@example.com</strong> (replace this with your Zelle email/phone)</p>
-<a class="btn" href="mailto:your-zelle-handle@example.com?subject=The%20Lombard%20Rent">Open mail to confirm payment</a>
+<div class="check">✅</div>
+<h2>We received your submission.</h2>
+<p class="muted">Our team will review and follow up if anything else is needed.</p>
+<a class="btn" href="index.html">Return to Home</a>
+<a class="btn" href="payments.html" style="margin-left:.5rem;">Go to Payments</a>
 </div>
-
-<div class="card">
-<h3>Cash App</h3>
-<p>Cashtag: <strong>$YourCashtag</strong></p>
-<a class="btn" href="https://cash.app/$YourCashtag" target="_blank" rel="noopener">Pay with Cash App</a>
-</div>
-
-<p class="muted">Add ACH/Stripe later if you want automatic payments.</p>
-</main>
-<footer class="site-footer">© 2025 The Lombard</footer>
-</body></html>
-<a class="btn" href="https://cash.app/$TebataMgmt" target="_blank" rel="noopener">Open Cash App</a>
-</div>
-
-<div class="card">
-<h3>Zelle</h3>
-<p>Send to: <strong>payments@tebata.com</strong> (TEBATA Property Management).</p>
-<!-- Optionally link your bank’s Zelle deeplink here -->
-</div>
-
-<div class="card">
-<h3>Other Methods</h3>
-<p>Need ACH or card? Email us at <a href="mailto:payments@tebata.com">payments@tebata.com</a>.</p>
-</div>
-</div>
-<p class="note">Include your **Unit (1F, 2F, or 2R)** and month in the memo.</p>
 </main>
 
-<footer class="site-footer">&copy; 2025 The Lombard • TEBATA Property Management</footer>
+<footer class="site-footer">© <span id="y"></span> The Lombard • Managed by TEBATA Property Management</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
-
