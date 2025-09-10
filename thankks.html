@@ -14,3 +14,37 @@
 <footer class="site-footer">© 2025 The Lombard</footer>
 </body>
 </html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thanks — The Lombard</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+.wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+.check { font-size: 3rem; line-height: 1; margin-bottom: .5rem; }
+.card { background:#004080; color:#fff; border-radius:10px; padding:1.25rem; }
+.btn { display:inline-block; margin-top:1rem; background:#4db8ff; color:#000; padding:.6rem 1rem; border-radius:8px; text-decoration:none; }
+.muted { opacity:.9 }
+</style>
+</head>
+<body>
+<header class="site-header">
+<h1>Thank You</h1>
+</header>
+
+<main class="wrap">
+<div class="card">
+<div class="check">✅</div>
+<h2>We received your submission.</h2>
+<p class="muted">Our team will review and follow up if anything else is needed.</p>
+<a class="btn" href="index.html">Return to Home</a>
+<a class="btn" href="payments.html" style="margin-left:.5rem;">Go to Payments</a>
+</div>
+</main>
+
+<footer class="site-footer">© <span id="y"></span> The Lombard • Managed by TEBATA Property Management</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
