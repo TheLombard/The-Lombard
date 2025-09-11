@@ -1,1 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Payments — The Lombard</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.selector{background:#004080;color:#fff;border-radius:8px;padding:1rem;margin-bottom:1rem}
+.selector label{font-weight:700}
+.selector select{margin-left:.5rem;padding:.4rem;border-radius:6px;border:1px solid #cfe}
+.embed{border:0;width:100%;height:70vh;border-radius:8px;background:#fff}
+</style>
+</head>
+<body>
+<header class="site-header"><h1>Review Your Payments</h1></header>
+<nav class="top-nav">
+<a href="index.html">Home</a>
+<a href="payments.html">Payments</a>
+<a href="payments-history.html" aria-current="page">Review Payments</a>
+<a href="contact.html">Contact</a>
+</nav>
 
+<main class="wrap">
+<section class="selector">
+<label for="unitSel">Select your unit:</label>
+<select id="unitSel">
+<option value="">Choose…</option>
+<option value="1F">1F — 2 bedrooms</option>
+<option value="2F">2F — 2 bedrooms</option>
+<option value="2R">2R — Studio (electricity included)</option>
+</select>
+</section>
+
+<section class="card">
+<h3>History</h3>
+<p class="muted">This view is read‑only. For corrections, email <a href="mailto:payments@thelombardbuilding.com">payments@thelombardbuilding.com</a>.</p>
+<iframe id="historyFrame" class="embed" title="Payment History"></iframe>
+</section>
+
+<section class="card" style="margin-top:1rem;">
+<h3>Don’t see your latest payment?</h3>
+<p>Upload your receipt and we’ll reconcile it promptly.</p>
+<a class="btn" href="receipt.html">Upload Payment Receipt</a>
+</section>
+</main>
+
+<footer class="site-footer">© <span id="y"></span> The Lombard • Managed by TEBATA Property Management</footer>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// TODO: replace these URLs with your Google Sheets "publish to the web" filtered views
+const views = {
+"1F": "https://docs.google.com/spreadsheets/d/XXXX/pubhtml?widget=true&headers=false",
+"2F": "https://docs.google.com/spreadsheets/d/YYYY/pubhtml?widget=true&headers=false",
+"2R": "https://docs.google.com/spreadsheets/d/ZZZZ/pubhtml?widget=true&headers=false"
+};
+
+const sel = document.getElementById('unitSel');
+const frame = document.getElementById('historyFrame');
+
+sel.addEventListener('change', () => {
+const v = views[sel.value] || "";
+frame.src = v;
+});
+</script>
+</body>
+</html>
