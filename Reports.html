@@ -1,1 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owner Reports — The Lombard</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header" style="display:flex;justify-content:space-between;align-items:center;">
+<h1>Owner Reports</h1>
+<a href="../index.html" style="color:#fff;text-decoration:none;">← Back to site</a>
+</header>
 
+<main class="wrap">
+<section class="card">
+<h3>Monthly Reports (CSV / PDF)</h3>
+<p>Upload exports to <code>/reports/monthly/</code> and link them here.</p>
+<ul>
+<li><a href="../reports/monthly/2025-01.csv" download>2025‑01 (CSV)</a></li>
+<li><a href="../reports/monthly/2025-02.csv" download>2025‑02 (CSV)</a></li>
+<!-- Add more months as you upload -->
+</ul>
+</section>
+
+<section class="card">
+<h3>Yearly Summaries</h3>
+<p>Upload summaries to <code>/reports/yearly/</code> (CSV or PDF).</p>
+<ul>
+<li><a href="../reports/yearly/2025-summary.csv" download>2025 Summary (CSV)</a></li>
+<li><a href="../reports/yearly/2025-summary.pdf" target="_blank">2025 Summary (PDF)</a></li>
+</ul>
+</section>
+
+<section class="card">
+<h3>Source Ledger (Google Sheets)</h3>
+<p>Recommended master ledger columns: <em>Date, Unit, Tenant, Amount, Method, Memo</em>.</p>
+<p>Publish a read‑only view (owner‑only!) and paste the embed:</p>
+<div class="map-embed" style="height:420px">
+<!-- Replace the src with your private dashboard URL if wanted -->
+<iframe src="" title="Private Ledger (optional)"></iframe>
+</div>
+<p class="muted">Tip: Create monthly & yearly pivot tables in Sheets, then File → Download → CSV/PDF and upload to /reports/.</p>
+</section>
+</main>
+
+<footer class="site-footer">© <span id="y"></span> The Lombard • Managed by TEBATA Property Management</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
