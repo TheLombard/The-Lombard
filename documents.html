@@ -1,88 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0c3c8c" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documents & Forms – The Lombard</title>
-
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="icons/favicon.ico" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="manifest" href="manifest.json" />
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js');
-      });
-    }
-  </script>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f8f9fb; color: #222; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
-    .site-header { background:#0c3c8c; color:#fff; padding: 1rem 1.25rem; }
-    .site-header h1 { margin: 0; font-size: 1.5rem; }
-    .card { background:#fff; padding:1.25rem; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,.06); margin: 1rem 0; }
-    .btn { display:inline-block; margin:.4rem .4rem .2rem 0; padding:.6rem .9rem; border-radius:8px; background:#0c3c8c; color:#fff; text-decoration:none; font-weight:600; }
-    .btn-row { margin-top:.5rem; }
-    .muted { color:#666; font-size:.95rem; }
-    ul.linklist { padding-left: 1.1rem; }
-    ul.linklist li { margin:.35rem 0; }
-    .site-footer { text-align:center; padding:1.25rem; color:#667; font-size:.95rem; }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="site-header"><h1>Documents & Forms</h1></header>
-  <main class="wrap">
-
-    <section class="card">
-      <h3>📬 Welcome Letter</h3>
-      <p class="muted">Start here for key contacts, move‑in steps, and building essentials.</p>
-      <div class="btn-row">
-        <a class="btn" href="documents/welcome-letter.pdf" target="_blank" rel="noopener">View Welcome Letter (PDF)</a>
-        <a class="btn" href="welcome-letter.html" target="_blank" rel="noopener">Open in Browser (HTML)</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h3>📥 Move‑In Checklist</h3>
-      <p class="muted">Document unit condition on move‑in day. Return within 48 hours of move‑in.</p>
-      <div class="btn-row">
-        <a class="btn" href="documents/move-in-checklist.pdf" target="_blank" rel="noopener">Printable PDF</a>
-        <a class="btn" href="documents/move-in-checklist_fillable.pdf" target="_blank" rel="noopener">Fillable PDF</a>
-        <a class="btn" href="move-in-checklist.html" target="_blank" rel="noopener">Open in Browser (HTML)</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h3>📄 Lease Agreements (Preview)</h3>
-      <p class="muted">Preview standard terms & disclosures. Contact management for executed copies.</p>
-      <ul class="linklist">
-        <li><a class="btn" href="lease-unit-2F-detailed.html" target="_blank" rel="noopener">Lease – Unit 2F (2 Bedrooms)</a></li>
-        <li><a class="btn" href="lease-unit-2R-detailed.html" target="_blank" rel="noopener">Lease – Unit 2R (Studio)</a></li>
-        <li><a class="btn" href="documents/lease-dylan-2R.pdf" target="_blank" rel="noopener">Lease – Unit 2R (Sample PDF)</a></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h3>🏢 Baltimore Rental License</h3>
-      <p class="muted">This property is registered and licensed with the City of Baltimore.</p>
-      <div class="btn-row">
-        <a class="btn" href="documents/baltimore-rental-license.pdf" target="_blank" rel="noopener">View License (PDF)</a>
-      </div>
-    </section>
-
-    <section class="card">
-      <h3>📤 Upload Documents</h3>
-      <p class="muted">Submit your signed lease, move‑in checklist, or payment receipts.</p>
-      <div class="btn-row">
-        <a class="btn" href="upload.html">Go to Upload Form</a>
-      </div>
-    </section>
-
-  </main>
-  <footer class="site-footer">© <span id="y"></span> The Lombard • Managed by TEBATA Property Management • <a href="privacy.html">Privacy</a></footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <div class="container">
+    <h1>Documents & Forms</h1>
+    <p>Below are official documents for The Lombard Apartments. Click any link to view or download.</p>
+    <ul>
+      <li><a href="/documents/welcome-letter.pdf" target="_blank">📄 Welcome Letter</a></li>
+      <li><a href="/documents/move-in-checklist.pdf" target="_blank">📋 Move-In Checklist</a></li>
+      <li><a href="/documents/lease-dylan-2R.pdf" target="_blank">📝 Lease – Unit 2R</a></li>
+      <li><a href="/documents/lease-lashea-2F.pdf" target="_blank">📝 Lease – Unit 2F</a></li>
+      <li><a href="/documents/baltimore-rental-license.pdf" target="_blank">📌 Baltimore Rental License</a></li>
+    </ul>
+    <p>If you have questions, contact <a href="mailto:tebatapropertymanagement@gmail.com">tebatapropertymanagement@gmail.com</a></p>
+    <footer>
+      <p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
+    </footer>
+  </div>
 </body>
 </html>
