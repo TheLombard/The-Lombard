@@ -1,19 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0c3c8c" />
-<title>Available Units – The Lombard</title>
+<title>Availability — The Lombard</title>
 
+<!-- use your existing site styles -->
 <link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="icons/favicon.ico" />
-<link rel="apple-touch-icon" href="icons/icon-192.png" />
-<link rel="manifest" href="manifest.json" />
 
-<script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('service-worker.js');
-});
+<!-- tiny page-specific helpers (non-invasive) -->
+<style>
+.container { max-width: 980px; margin: 0 auto; padding: 0 1rem; }
+.page-title { margin: 2.5rem 0 1rem; }
+.units { display: grid; gap: 12px; }
+@media (min-width: 680px){ .units { grid-template-columns: 1fr 1fr; } }
+
+.card {
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 8px;
+padding: 14px 16px;
 }
-</script>
+.card h3 { margin: 0 0 .35rem; }
+
+.meta { font-size: .95rem; opacity: .9; margin-bottom: .5rem; }
+.badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.badge {
+display: inline-block;
+font-size: .85rem;
+padding: 4px 8px;
+border-radius: 999px;
+border: 1px solid transparent;
+white-space: nowrap;
+}
+.available { background: #0e7a3e20; color: #0fd27a; border-color: #0fd27a55; }
+.occupied { background: #7a0e0e20; color: #ff6a6a; border-color: #ff6a6a55; }
+.soon { background: #7a5b0e20; color: #ffc04d; border-color: #ffc04d55; }
+
+.nav { display:flex; gap:8px; margin: 1rem 0 2rem; flex-wrap:wrap; }
+.nav a.button { text-decoration:none; }
+</style>
 </head>
+<body>
+
+<!-- HEADER (matches your site) -->
+<header class="site-header">
+<div class="container">
+<div class="brand">
+<div class="brand-text"><a href="index.html">The Lombard</a></div>
+<div class="brand-sub">Where You Belong</div>
+</div>
+
+<nav class="nav">
+<a class="button" href="index.html">Home</a>
+<a class="button" href="documents.html">Documents</a>
+<a class="button" href="maintenance.html">Maintenance</a>
+<a class="button" href="payments.html">Payments</a>
+<a class="button" href="vendors.html">Vendors</a>
+<a class="button button-primary" href="availability.html" aria-current="page">Availability</a>
+<a class="button" href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<h1 class="page-title">Availability</h1>
+<p class="meta">Below is the current status of units at <strong>869 W. Lombard Street, Baltimore MD</strong>.
+For questions, email <a href="mailto:tebatapropertymanagement@gmail.com">tebatapropertymanagement@gmail.com</a>.
+</p>
+
+<!-- Units grid -->
+<section class="units">
+
+<!-- SAMPLE UNIT CARDS — edit as needed -->
+<article class="card">
+<h3>Unit 1F — 2 Bedrooms</h3>
+<p class="meta">$1,450 / month · Approx. 700 sq ft</p>
+<div class="badges">
+<span class="badge available">Available Now</span>
+</div>
+<p><a href="contact.html" class="button">Schedule a Viewing</a></p>
+</article>
+
+<article class="card">
+<h3>Unit 1R — 1 Bedroom</h3>
+<p class="meta">$1,295 / month</p>
+<div class="badges">
+<span class="badge soon">Available Oct 15</span>
+</div>
+<p><a href="contact.html" class="button">Join Waitlist</a></p>
+</article>
+
+<article class="card">
+<h3>Unit 2F — 2 Bedrooms</h3>
+<p class="meta">$1,600 / month</p>
+<div class="badges">
+<span class="badge occupied">Occupied</span>
+</div>
+<p><a href="documents.html" class="button">View Lease (PDF)</a></p>
+</article>
+
+<article class="card">
+<h3>Unit 2R — Studio</h3>
+<p class="meta">$1,065 / month</p>
+<div class="badges">
+<span class="badge occupied">Occupied</span>
+</div>
+<p><a href="documents.html" class="button">View Lease (PDF)</a></p>
+</article>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="container">
+<p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
+</div>
+</footer>
+
+</body>
+</html>
