@@ -1,62 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maintenance – The Lombard</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
 <header class="site-header">
 <div class="brand">
 <span class="brand-text">The Lombard</span>
 <span class="brand-sub">Where You Belong</span>
 </div>
-
 <nav class="main-nav">
-<a href="/">Home</a>
+<a href="/index.html">Home</a>
 <a href="/docs.html">Documents</a>
-<a href="/maintenance.html">Maintenance</a>
+<a href="/maintenance.html" class="active">Maintenance</a>
 <a href="/payments.html">Payments</a>
 <a href="/vendors.html">Vendors</a>
 <a href="/contact.html">Contact</a>
 </nav>
 </header>
-<script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('service-worker.js');
-});
-}
-</script>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maintenance Request — The Lombard</title>
-<link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<header class="site-header">
-<h1>Submit a Maintenance Request</h1>
-<nav class="top-nav">
-<a href="index.html">Home</a>
-<a href="docs.html">Documents</a>
-<a href="payments.html">Payments</a>
-<a href="vendors.html">Vendors</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-<form name="maintenance" method="POST" data-netlify="true" action="/thanks.html" class="form card">
-<main class="container">
-<!-- Replace the src with your real Google Form link when ready -->
-<iframe
-class="embed"
-src="https://docs.google.com/forms/d/e/1FAIpQLSf-placeholder/viewform?embedded=true"
-loading="lazy"
-title="Maintenance Request Form">
-</iframe>
 
-<section class="alt-box">
-<h2>Emergency?</h2>
-<p>If there’s risk to life or property, call <strong>911</strong> first. For urgent building issues, call <a href="tel:+14435551234">+1 (443) 555‑1234</a>.</p>
+<!-- MAIN CONTENT -->
+<main class="container">
+<h1>Maintenance Request</h1>
+
+<section class="card">
+<h2>How to Submit a Request</h2>
+<p>To request maintenance or report an issue, please email:</p>
+<ul>
+<li>Email: <a href="mailto:manage@tebata.com">manage@tebata.com</a></li>
+<li>Include your name, unit, and a brief description of the issue</li>
+<li>Attach photos or videos if possible</li>
+</ul>
+<p><strong>Coming soon:</strong> an online request form directly on this page.</p>
+</section>
+
+<section class="card muted">
+<h2>Emergency Issues</h2>
+<p>For urgent matters (e.g., gas leaks, flooding, power outages):</p>
+<ul>
+<li>Call <strong>911</strong> for immediate danger</li>
+<li>Then notify management at <a href="tel:+18187478935">(818) 747‑8935</a></li>
+</ul>
+</section>
+
+<section class="card">
+<h2>General Tips</h2>
+<ul>
+<li>Clogged sink? Try a plunger before submitting.</li>
+<li>Power out in part of unit? Check your breaker panel first.</li>
+<li>Mice or insects? Let us know — pest control visits weekly.</li>
+</ul>
 </section>
 </main>
 
-<footer class="site-footer">&copy; 2025 The Lombard • TEBATA Property Management</footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+<p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
+</footer>
+
 </body>
 </html>
-
