@@ -1,57 +1,75 @@
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0c3c8c" />
-<title>Contact Us – The Lombard</title>
-
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="icons/favicon.ico" />
-<link rel="apple-touch-icon" href="icons/icon-192.png" />
-<link rel="manifest" href="manifest.json" />
-
-<script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('service-worker.js');
-});
-}
-</script>
-</head>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact — The Lombard</title>
-<link rel="stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact – The Lombard</title>
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+
+<!-- HEADER -->
 <header class="site-header">
-<h1>Contact</h1>
-<nav class="top-nav">
-<a href="index.html">Home</a>
-<a href="docs.html">Documents</a>
-<a href="maintenance.html">Maintenance</a>
-<a href="payments.html">Payments</a>
-<a href="vendors.html">Vendors</a>
+<div class="brand">
+<span class="brand-text">The Lombard</span>
+<span class="brand-sub">Where You Belong</span>
+</div>
+<nav class="main-nav">
+<a href="/index.html">Home</a>
+<a href="/docs.html">Documents</a>
+<a href="/maintenance.html">Maintenance</a>
+<a href="/payments.html">Payments</a>
+<a href="/vendors.html">Vendors</a>
+<a href="/contact.html" class="active">Contact</a>
 </nav>
 </header>
 
+<!-- MAIN CONTENT -->
 <main class="container">
-<div class="card">
-<h3>General</h3>
-<p>Email: <a href="mailto:manage@tebata.com">manage@tebata.com</a><br> Phone: <a href="tel:+14435551234">+1 (443) 555‑1234</a></p>
-</div>
-<div class="card">
-<h3>Leasing & Availability</h3>
-<p><a href="mailto:leasing@tebata.com">leasing@tebata.com</a></p>
-</div>
-<div class="card">
-<h3>Payments</h3>
-<p><a href="mailto:payments@tebata.com">payments@tebata.com</a></p>
-</div>
+<h1>Contact Us</h1>
+
+<section class="card">
+<h2>Management</h2>
+<p>Email: <a href="mailto:manage@tebata.com">manage@tebata.com</a></p>
+<p>General: <a href="mailto:tebatapropertymanagement@gmail.com">tebatapropertymanagement@gmail.com</a></p>
+<p>Phone: <a href="tel:+18187478935">(818) 747‑8935</a></p>
+<p>Address: 5055 Business Center Dr., Ste. 181, Fairfield, CA 94534</p>
+</section>
+
+<section class="card">
+<h2>Office Hours</h2>
+<ul>
+<li>Mon–Fri: 9:00am–5:00pm</li>
+<li>Sat: 10:00am–2:00pm</li>
+<li>Sun: Closed</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Emergency</h2>
+<p>Dial <strong>911</strong> first, then notify management.</p>
+</section>
+
+<section class="card">
+<h2>Map</h2>
+<p>869 W. Lombard Street, Baltimore, MD 21201</p>
+<iframe
+title="The Lombard Map"
+width="100%"
+height="300"
+style="border:0;border-radius:8px"
+loading="lazy"
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade"
+src="https://www.google.com/maps?q=869+W.+Lombard+Street,+Baltimore,+MD+21201&output=embed">
+</iframe>
+</section>
 </main>
 
-<footer class="site-footer">&copy; 2025 The Lombard • TEBATA Property Management</footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+<p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
+</footer>
+
 </body>
 </html>
