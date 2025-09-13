@@ -3,29 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Documents & Forms – The Lombard</title>
-<link rel="stylesheet" href="/styles.css" />
+<title>Documents & Forms — The Lombard</title>
+<!-- make sure this file exists in the repo root -->
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="container">
+
+<!-- HEADER (same across pages) -->
+<header class="site-header">
+<div class="brand">
+<div class="brand-text">The <strong>Lombard</strong></div>
+<div class="brand-tagline">Where You Belong</div>
+</div>
+
+<nav class="nav">
+<a href="index.html" class="pill">Home</a>
+<a href="maintenance.html" class="pill">Maintenance</a>
+<a href="payments.html" class="pill">Payments</a>
+<a href="vendors.html" class="pill">Vendors</a>
+<a href="contact.html" class="pill">Contact</a>
+</nav>
+</header>
+
+<main class="container">
 <h1>Documents &amp; Forms</h1>
-<p>Below are official documents for The Lombard Apartments. Click any link to view or download.</p>
+<p>Upload originals later to replace placeholders.</p>
 
 <div class="pill-row">
-<a class="pill" href="/docs/WELCOME_LETTER.pdf" target="_blank">Welcome Letter (PDF)</a>
-<a class="pill" href="/docs/MOVE_IN_CHECKLIST.pdf" target="_blank">Move-In Checklist (PDF)</a>
-<a class="pill" href="/docs/LEASE_2R_FULL.pdf" target="_blank">Lease — Unit 2R (PDF)</a>
-<a class="pill" href="/docs/LEASE_2F_FULL.pdf" target="_blank">Lease — Unit 2F (PDF)</a>
-<a class="pill" href="/docs/BALTIMORE_RENTAL_LICENSE.pdf" target="_blank">Baltimore Rental License (PDF)</a>
+<a class="pill" href="WELCOME_LETTER.pdf" target="_blank" rel="noopener">Welcome Letter (PDF)</a>
+<a class="pill" href="MOVE_IN_CHECKLIST.pdf" target="_blank" rel="noopener">Move‑In Checklist (PDF)</a>
+<a class="pill" href="LEASE_2R_FULL.pdf" target="_blank" rel="noopener">Lease — Unit 2R (PDF)</a>
+<a class="pill" href="LEASE_2F_FULL.pdf" target="_blank" rel="noopener">Lease — Unit 2F (PDF)</a>
+<a class="pill" href="BALTIMORE_LICENSE.pdf" target="_blank" rel="noopener">Baltimore Rental License (PDF)</a>
 </div>
 
-<p>If you have questions, contact
+<p class="muted">
+If you have questions, contact
 <a href="mailto:tebatapropertymanagement@gmail.com">tebatapropertymanagement@gmail.com</a>.
 </p>
+</main>
 
-<footer>
+<!-- FOOTER (same across pages) -->
+<footer class="site-footer">
 <p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
 </footer>
-</div>
+
 </body>
 </html>
