@@ -1,49 +1,43 @@
-<header class="site-header">
-<div class="brand">
-<span class="brand-text">The Lombard</span>
-<span class="brand-sub">Where You Belong</span>
-</div>
-
-<nav class="main-nav">
-<a href="/">Home</a>
-<a href="/docs.html">Documents</a>
-<a href="/maintenance.html">Maintenance</a>
-<a href="/payments.html">Payments</a>
-<a href="/vendors.html">Vendors</a>
-<a href="/contact.html">Contact</a>
-</nav>
-</header>
-
-<script>
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('service-worker.js');
-});
-}
-</script>
-</head><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Lombard – Where You Belong</title>
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-<header class="site-header">
-<h1>Welcome to <span class="highlight">The Lombard</span></h1>
-<p>This is your official tenant portal — managed by <strong>TEBATA Property Management</strong>.</p>
-</header>
+<!-- Header -->
+<div class="header">
+<h1>The Lombard</h1>
+<p>Where You Belong</p>
+</div>
 
-<nav class="nav-links">
-<a href="docs.html">📄 View Documents</a>
-<a href="maintenance.html">🛠 Submit Maintenance</a>
-<a href="https://cash.app/$TebataMgmt" target="_blank">💰 Make a Payment</a>
-</nav>
+<!-- Navigation -->
+<div class="nav">
+<a href="index.html" class="active">Home</a>
+<a href="documents.html">Documents</a>
+<a href="payments.html">Payments</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="vendors.html">Vendors</a>
+<a href="contact.html">Contact</a>
+</div>
 
-<footer class="site-footer">
-<p>&copy; 2025 The Lombard • Managed by TEBATA Property Management</p>
+<!-- Main Content -->
+<div class="container">
+<h2>Welcome to The Lombard</h2>
+<p>This is your official tenant portal — managed by TEBATA Property Management.</p>
+
+<div class="button-row">
+<a href="documents.html" class="button">📄 View Documents</a>
+<a href="maintenance.html" class="button">🛠 Submit Maintenance</a>
+<a href="payments.html" class="button">💳 Make a Payment</a>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+<p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
 </footer>
 </body>
 </html>
