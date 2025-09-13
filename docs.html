@@ -2,161 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Documents & Forms — The Lombard</title>
-<link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#003366" />
-<link rel="icon" href="assets/icons/icon-192.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Documents & Forms – The Lombard</title>
+<link rel="stylesheet" href="/styles.css" />
 <style>
-:root {
---bg-deep: #002a4a;
---bg: #0d3d66;
---card: #114b80;
---text: #e9f2fb;
---text-dim: #cfe3f7;
---btn: #1769aa;
---btn-hover: #1d7dc9;
---accent: #ffb703;
-}
-* { box-sizing: border-box }
-body {
-margin: 0;
-font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-color: var(--text);
-background: radial-gradient(1200px 700px at 50% -200px, var(--bg), var(--bg-deep));
-min-height: 100svh;
-display: grid;
-grid-template-rows: auto 1fr auto;
-}
-header {
-padding: 2rem 1rem 1rem;
-text-align: center;
-}
-header h1 { margin: 0 0 .5rem; font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem) }
-header p { margin: 0; color: var(--text-dim) }
-
-nav.tabs {
-display: grid;
-grid-auto-flow: column;
-gap: .5rem;
-justify-content: center;
-padding: 1rem;
-}
-nav.tabs a {
-text-decoration: none;
-color: var(--text);
-background: #0b3c64;
-border: 1px solid rgba(255,255,255,.12);
-padding: .45rem .8rem;
-border-radius: .5rem;
-font-weight: 600;
-}
-nav.tabs a[aria-current="page"] {
-background: var(--btn);
-border-color: transparent;
-}
-
-main {
-display: grid;
-place-items: start center;
-padding: 1rem;
-}
-.list {
-width: min(920px, 92vw);
-display: grid;
-gap: .75rem;
-}
-.item a {
-display: flex;
-align-items: center;
-gap: .75rem;
-background: var(--card);
-border: 1px solid rgba(255,255,255,.12);
-padding: .9rem 1rem;
-border-radius: .75rem;
-text-decoration: none;
-color: var(--text);
-font-weight: 600;
-}
-.item a:hover { background: #13609d }
-.item small { color: var(--text-dim); font-weight: 400 }
-.badge {
-margin-left: auto;
-background: rgba(255,255,255,.14);
-padding: .15rem .5rem;
-border-radius: .4rem;
-font-size: .8rem;
-}
-footer {
-color: var(--text-dim);
-text-align: center;
-padding: 2rem 1rem 3rem;
-font-size: .9rem;
-}
+/* fallback styling so it still looks like buttons */
+.doc-btn{display:block;padding:.9rem 1.2rem;margin:.6rem 0;border-radius:.4rem;
+background:#1f5fbf;color:#fff;text-decoration:none;font-weight:600}
+.doc-btn:hover{opacity:.9}
+.topnav{margin:.8rem 0}
+.topnav a{margin-right:.5rem}
+.container{max-width:960px;margin:0 auto;padding:1.25rem}
 </style>
 </head>
 <body>
-<header>
+<div class="container">
 <h1>Documents &amp; Forms</h1>
-<p>Open or download the latest files. Email updates to <a href="mailto:manage@tebata.com" style="color:#9fd1ff">manage@tebata.com</a>.</p>
-<nav class="tabs" aria-label="Main">
-<a href="index.html">Home</a>
-<a href="maintenance.html">Maintenance</a>
-<a href="payments.html">Payments</a>
-<a href="vendors.html">Vendors</a>
-<a href="contact.html">Contact</a>
-<a href="docs.html" aria-current="page">Documents</a>
-</nav>
-</header>
+<p>Upload originals later to replace placeholders.</p>
 
-<main>
-<div class="list" role="list">
-<!-- Welcome Letter -->
-<div class="item" role="listitem">
-<a href="files/welcome-letter.pdf" target="_blank" rel="noopener">
-📄 Welcome Letter <small>(PDF)</small>
-<span class="badge">opens in new tab</span>
-</a>
+<div class="topnav">
+<a class="btn" href="/index.html">Home</a>
+<a class="btn" href="/maintenance.html">Maintenance</a>
+<a class="btn" href="/payments.html">Payments</a>
+<a class="btn" href="/vendors.html">Vendors</a>
+<a class="btn" href="/contact.html">Contact</a>
 </div>
 
-<!-- Move‑In Checklist -->
-<div class="item" role="listitem">
-<a href="files/move-in-checklist.pdf" target="_blank" rel="noopener">
-✅ Move‑In Checklist <small>(PDF)</small>
-<span class="badge">fillable</span>
-</a>
-</div>
+<a class="doc-btn" href="/WELCOME_LETTER.pdf" target="_blank">Welcome Letter (PDF)</a>
+<a class="doc-btn" href="/MOVE_IN_CHECKLIST.pdf" target="_blank">Move‑In Checklist (PDF)</a>
+<a class="doc-btn" href="/LEASE_2R_FULL.pdf" target="_blank">Lease — Unit 2R (PDF)</a>
+<a class="doc-btn" href="/LEASE_2F_FULL.pdf" target="_blank">Lease — Unit 2F (PDF)</a>
 
-<!-- Lease – 2R -->
-<div class="item" role="listitem">
-<a href="files/lease-2R.pdf" target="_blank" rel="noopener">
-🏠 Lease — Unit 2R <small>(PDF)</small>
-</a>
-</div>
+<p>Email updated PDFs to <a href="mailto:manage@tebata.com">manage@tebata.com</a> and we’ll swap these links.</p>
 
-<!-- Lease – 2F (optional; remove if not ready) -->
-<div class="item" role="listitem">
-<a href="files/lease-2F.pdf" target="_blank" rel="noopener">
-🏠 Lease — Unit 2F <small>(PDF)</small>
-</a>
+<footer>
+<p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
+</footer>
 </div>
-
-<!-- Baltimore Rental License -->
-<div class="item" role="listitem">
-<a href="files/baltimore-rental-license.pdf" target="_blank" rel="noopener">
-🧾 Baltimore Rental License <small>(PDF)</small>
-</a>
-</div>
-</div>
-</main>
-
-<footer>© 2025 The Lombard • Managed by TEBATA Property Management</footer>
-<script>
-// Register service worker if your site already has one
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => navigator.serviceWorker.register('service-worker.js').catch(()=>{}));
-}
-</script>
 </body>
 </html>
-
