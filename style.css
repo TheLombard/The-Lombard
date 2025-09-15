@@ -1,78 +1,46 @@
-
-/* Base reset */
-body, h1, h2, h3, p, ul, li, a, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e0f0ff, #c2dcf5); /* Lighter blue gradient */
-    color: #000;
-    padding: 20px;
+font-family: 'Segoe UI', sans-serif;
+background: var(--blue-neutral); /* NEUTRAL blue background */
+color: var(--text-light);
+margin: 0;
+padding: 0;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
+h1, h2, h3, p {
+color: var(--text-light);
 }
 
-h1, h2 {
-    text-align: center;
-    color: #003366;
-    margin-bottom: 20px;
+a {
+color: var(--link-color);
+text-decoration: none;
 }
 
-nav, footer {
-    text-align: center;
-    margin: 20px 0;
+a:hover {
+color: #ffffff;
+text-decoration: underline;
 }
 
-nav a, footer a {
-    text-decoration: none;
-    color: #003366;
-    margin: 0 10px;
+/* Prevent purple "visited" links */
+a:visited {
+color: var(--link-color);
 }
 
-nav a:hover, footer a:hover {
-    text-decoration: underline;
+.navbar {
+background-color: var(--blue-dark);
+padding: 10px;
+display: flex;
+justify-content: center;
+gap: 1rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.navbar a {
+background-color: var(--blue-neutral);
+padding: 8px 12px;
+border-radius: 8px;
+color: white;
 }
 
-ul li {
-    margin: 10px 0;
+.navbar a:hover {
+background-color: var(--blue-dark);
 }
 
-a.button, .button {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-a.button:hover, .button:hover {
-    background-color: #00509e;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    a.button {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-}
