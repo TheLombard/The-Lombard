@@ -3,141 +3,60 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gallery — The Lombard</title>
-<link rel="stylesheet" href="/styles.css" />
-<style>
-/* Page-scoped styles (safe to leave here or move to styles.css) */
-.page-intro {margin: 1rem 0 2rem; color: #334; font-size: 1.05rem;}
-.unit-block {margin: 2.5rem 0;}
-.unit-block h2 {margin: 0 0 0.75rem; font-size: 1.35rem;}
-.thumb-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-gap: 12px;
-}
-.thumb {
-position: relative; overflow: hidden; border-radius: 8px;
-background: #f4f7fb; border: 1px solid #e1e7f0;
-}
-.thumb img {
-width: 100%; height: 180px; object-fit: cover; display: block; transition: transform .25s ease;
-}
-.thumb:hover img {transform: scale(1.03);}
-
-/* Lightbox */
-.lightbox {
-position: fixed; inset: 0; display: none; place-items: center;
-background: rgba(0,0,0,.78); z-index: 9999; padding: 2rem;
-}
-.lightbox.open {display: grid;}
-.lightbox img {max-width: 100%; max-height: 82vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.5);}
-.lb-close, .lb-prev, .lb-next {
-position: absolute; top: 50%; transform: translateY(-50%);
-background: rgba(0,0,0,.55); color: #fff; border: none; width: 44px; height: 44px;
-border-radius: 50%; cursor: pointer; font-size: 20px; display: grid; place-items: center;
-}
-.lb-close {top: 16px; right: 16px; transform: none;}
-.lb-prev {left: 16px;}
-.lb-next {right: 16px;}
-@media (hover:none){ .thumb img{height: 200px;} }
-</style>
+<title>Gallery – The Lombard</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<!-- HEADER (reuse your site header here if you have one) -->
-<header class="site-header">
-<div class="container">
-<h1 class="site-title">The Lombard</h1>
-<nav class="nav">
-<a href="/">Home</a>
-<a href="/documents.html">Documents</a>
-<a href="/payments.html">Payments</a>
-<a href="/maintenance.html">Maintenance</a>
-<a class="active" href="/gallery.html">Gallery</a>
-<a href="/contact.html">Contact</a>
+<div class="header">
+<h1>The Lombard</h1>
+<p class="slogan">Where You Belong</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="documents.html">Documents</a>
+<a href="payments.html">Payments</a>
+<a href="maintenance.html">Maintenance</a>
+<a class="active" href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
 </nav>
 </div>
-</header>
 
 <main class="container">
-<h1>Gallery</h1>
-<p class="page-intro">Browse photos from each apartment. Click any image to view full size, then use arrows or your keyboard to navigate.</p>
+<h2>Gallery</h2>
+<p>Browse photos from each apartment. Click any image to view full size.</p>
 
-<!-- Unit 2F -->
-<section class="unit-block" aria-labelledby="unit-2f">
-<h2 id="unit-2F">Unit 2F — Two Bedrooms</h2>
-<div class="thumb-grid" data-gallery="2F">
-<a class="thumb" href="/images/2F/2F-01.jpg"><img loading="lazy" src="/images/2F/2F-01.jpg" alt="Unit 2F — living area view 1"></a>
-<a class="thumb" href="/images/2F/2F-02.jpg"><img loading="lazy" src="/images/2F/2F-02.jpg" alt="Unit 2F — living area view 2"></a>
-<a class="thumb" href="/images/2F/2F-03.jpg"><img loading="lazy" src="/images/2F/2F-03.jpg" alt="Unit 2F — kitchen & exposed brick"></a>
-<a class="thumb" href="/images/2F/2F-04.jpg"><img loading="lazy" src="/images/2F/2F-04.jpg" alt="Unit 2F — long room toward kitchen"></a>
-<a class="thumb" href="/images/2F/2F-05.jpg"><img loading="lazy" src="/images/2F/2F-05.jpg" alt="Unit 2F — alternate angle"></a>
-<a class="thumb" href="/images/2F/2F-06.jpg"><img loading="lazy" src="/images/2F/2F-06.jpg" alt="Unit 2F — additional view"></a>
+<section>
+<h3>Unit 2F — Two Bedrooms</h3>
+<div class="gallery-grid">
+<img src="images/2F/2f-livingroom-fullview.jpg" alt="Unit 2F — living area view 1" />
+<img src="images/2F/2f-livingroom-windows.jpg" alt="Unit 2F — living area view 2" />
+<img src="images/2F/2f-kitchen-brickwall.jpg" alt="Unit 2F — kitchen & exposed brick" />
+<img src="images/2F/2f-kitchen-front.jpg" alt="Unit 2F — kitchen angle" />
+<img src="images/2F/2f-livingroom-windows-2.jpg" alt="Unit 2F — alternate angle" />
+<img src="images/2F/2f-bedroom-windows.jpg" alt="Unit 2F — additional view" />
 </div>
 </section>
 
-<!-- Unit 2R -->
-<section class="unit-block" aria-labelledby="unit-2r">
-<h2 id="unit-2r">Unit 2R — Two Bedrooms</h2>
-<div class="thumb-grid" data-gallery="2R">
-<a class="thumb" href="/images/2R/2R-01.jpg"><img loading="lazy" src="/images/2R/2R-01.jpg" alt="Unit 2R — modern kitchenette"></a>
-<a class="thumb" href="/images/2R/2R-02.jpg"><img loading="lazy" src="/images/2R/2R-02.jpg" alt="Unit 2R — living space view 1"></a>
-<a class="thumb" href="/images/2R/2R-03.jpg"><img loading="lazy" src="/images/2R/2R-03.jpg" alt="Unit 2R — bathroom"></a>
-<a class="thumb" href="/images/2R/2R-04.jpg"><img loading="lazy" src="/images/2R/2R-04.jpg" alt="Unit 2R — living space view 2"></a>
-<a class="thumb" href="/images/2R/2R-05.jpg"><img loading="lazy" src="/images/2R/2R-05.jpg" alt="Unit 2R — kitchen counter details"></a>
-<a class="thumb" href="/images/2R/2R-06.jpg"><img loading="lazy" src="/images/2R/2R-06.jpg" alt="Unit 2R — kitchen & fridge"></a>
+<section>
+<h3>Unit 2R — Studio</h3>
+<div class="gallery-grid">
+<img src="images/2R/2r-kitchen-modern.jpg" alt="Unit 2R — kitchen modern view" />
+<img src="images/2R/2r-bedroom-windows.jpg" alt="Unit 2R — bedroom windows" />
+<img src="images/2R/2r-bathroom-vanity.jpg" alt="Unit 2R — bathroom vanity" />
 </div>
 </section>
 </main>
 
-<!-- FOOTER (reuse your site footer here if you have one) -->
-<footer class="site-footer">
-<div class="container">
+<footer>
 <p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
-</div>
 </footer>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
-<button class="lb-close" id="lbClose" aria-label="Close">✕</button>
-<button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
-<img id="lbImg" alt="">
-<button class="lb-next" id="lbNext" aria-label="Next">›</button>
-</div>
-
-<script>
-(function(){
-const box = document.getElementById('lightbox');
-const img = document.getElementById('lbImg');
-const prevBtn = document.getElementById('lbPrev');
-const nextBtn = document.getElementById('lbNext');
-const closeBtn = document.getElementById('lbClose');
-
-// Build a flat list of images in the page order
-const anchors = Array.from(document.querySelectorAll('.thumb-grid a.thumb'));
-let index = -1;
-
-function openAt(i){
-index = i;
-img.src = anchors[index].getAttribute('href');
-img.alt = anchors[index].querySelector('img').alt || '';
-box.classList.add('open');
-}
-function close(){ box.classList.remove('open'); img.src=''; index=-1; }
-function prev(){ if(index>0) openAt(index-1); }
-function next(){ if(index<anchors.length-1) openAt(index+1); }
-
-anchors.forEach((a,i)=>a.addEventListener('click', e=>{ e.preventDefault(); openAt(i); }));
-closeBtn.addEventListener('click', close);
-prevBtn.addEventListener('click', prev);
-nextBtn.addEventListener('click', next);
-box.addEventListener('click', e=>{ if(e.target===box) close(); });
-document.addEventListener('keydown', e=>{
-if(!box.classList.contains('open')) return;
-if(e.key==='Escape') close();
-if(e.key==='ArrowLeft') prev();
-if(e.key==='ArrowRight') next();
-});
-})();
-</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
