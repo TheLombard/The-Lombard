@@ -3,90 +3,72 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Availability — The Lombard</title>
+<title>Availability – The Lombard</title>
 <link rel="stylesheet" href="styles.css" />
 <style>
-.container{max-width:980px;margin:0 auto;padding:0 1rem}
-.units{display:grid;gap:12px}
-@media(min-width:680px){.units{grid-template-columns:1fr 1fr}}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px 16px}
-.meta{opacity:.9;margin:.25rem 0 .75rem}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin:.25rem 0 .75rem}
-.badge{font-size:.85rem;padding:4px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
-.available{background:#0e7a3e20;color:#0fd27a;border-color:#0fd27a55}
-.occupied{background:#7a0e0e20;color:#ff6a6a;border-color:#ff6a6a55}
-.soon{background:#7a5b0e20;color:#ffc04d;border-color:#ffc04d55}
-.nav{display:flex;gap:8px;margin:1rem 0 2rem;flex-wrap:wrap}
-.button{display:inline-block;padding:.6rem .9rem;border-radius:8px;text-decoration:none;background:#1f5fbf;color:#fff;font-weight:600}
-.button:hover{opacity:.92}
+.cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.card {background:#fff;border-radius:10px;padding:1rem;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.card h3{margin:.25rem 0 .5rem}
+.badge{display:inline-block;font-size:.85rem;padding:.25rem .6rem;border-radius:999px}
+.badge.ok{background:#e6f6ed;color:#16794e;border:1px solid #bfe6d4}
+.badge.no{background:#ffecee;color:#b42318;border:1px solid #ffd3d6}
+.meta{margin:.5rem 0;color:#475467;font-size:.95rem}
+.cta{margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.cta a{display:inline-block;padding:.5rem .8rem;border-radius:8px;background:#13467E;color:#fff;text-decoration:none}
+.cta a.secondary{background:#e6eef9;color:#13467E}
 </style>
 </head>
 <body>
-
-<!-- Header -->
-<header class="site-header">
-<div class="container">
-<div class="brand">
-<div class="brand-text"><a href="index.html">The Lombard</a></div>
-<div class="brand-sub">Where You Belong</div>
-</div>
-<nav class="nav">
-<a class="button" href="index.html">Home</a>
-<a class="button" href="documents.html">Documents</a>
-<a class="button" href="payments.html">Payments</a>
-<a class="button" href="maintenance.html">Maintenance</a>
-<a class="button" href="vendors.html">Vendors</a>
-<a class="button" href="availability.html" aria-current="page">Availability</a>
-<a class="button" href="contact.html">Contact</a>
-<a class="button" href="gallery.html">Gallery</a>
+<div class="header">
+<h1>The Lombard</h1>
+<p class="slogan">Where You Belong</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="documents.html">Documents</a>
+<a href="payments.html">Payments</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="gallery.html">Gallery</a>
+<a class="active" href="availability.html">Availability</a>
+<a href="contact.html">Contact</a>
 </nav>
 </div>
-</header>
 
 <main class="container">
-<h1>Availability</h1>
-<p class="meta">Current status for 869 W. Lombard Street, Baltimore, MD. Questions? <a href="mailto:tebatapropertymanagement@gmail.com">Email management</a>.</p>
+<h2>Availability</h2>
+<p>Check current status for each unit. To apply or ask a question, use the contact links below.</p>
 
-<section class="units">
-<!-- 1F — Available -->
+<div class="cards">
+<!-- Unit 2F -->
 <article class="card">
-<h3>Unit 1F — 2 Bedrooms</h3>
-<p class="meta">$1,450 / month · Free laundry · Wi‑Fi included</p>
-<div class="badges">
-<span class="badge available">Available Now</span>
+<h3>Unit 2F — Two Bedrooms</h3>
+<!-- Set to ok for “Available” or no for “Occupied” -->
+<span class="badge ok">Available</span>
+<div class="meta">Rent: $1,600 • Deposit: $1,600 • 2 BR / 1 BA</div>
+<div class="meta">Utilities: Water/Trash/Sewer included; Wi‑Fi (first 12 months) provided.</div>
+<div class="cta">
+<a href="gallery.html#unit-2f">View Photos</a>
+<a class="secondary" href="documents.html">See Documents</a>
+<a href="mailto:manage@tebata.com?subject=Inquiry%20about%20Unit%202F">Contact Management</a>
 </div>
-<p>
-<a class="button" href="contact.html">Schedule a Viewing</a>
-<a class="button" href="documents.html">See Documents</a>
-</p>
 </article>
 
-<!-- 2F — Occupied -->
-<article class="card">
-<h3>Unit 2F — 2 Bedrooms</h3>
-<p class="meta">$1,600 / month · Baseboard heater · Wi‑Fi included</p>
-<div class="badges">
-<span class="badge occupied">Occupied</span>
-</div>
-<p><a class="button" href="documents.html">Lease (PDF)</a></p>
-</article>
-
-<!-- 2R — Occupied -->
+<!-- Unit 2R -->
 <article class="card">
 <h3>Unit 2R — Studio</h3>
-<p class="meta">$1,065 / month · Electricity included · Free laundry · Wi‑Fi</p>
-<div class="badges">
-<span class="badge occupied">Occupied</span>
+<span class="badge no">Occupied</span>
+<div class="meta">Rent: $1,200 • Deposit: $1,200 • Studio / 1 BA</div>
+<div class="meta">Utilities: Water/Trash/Sewer included; Wi‑Fi (first 12 months) provided.</div>
+<div class="cta">
+<a href="gallery.html#unit-2r">View Photos</a>
+<a class="secondary" href="documents.html">See Documents</a>
+<a href="mailto:manage@tebata.com?subject=Future%20availability%20for%20Unit%202R">Join Waitlist</a>
 </div>
-<p><a class="button" href="documents.html">Lease (PDF)</a></p>
 </article>
-</section>
+</div>
 </main>
 
-<footer class="site-footer">
-<div class="container">
+<footer>
 <p>© 2025 The Lombard • Managed by TEBATA Property Management</p>
-</div>
 </footer>
 </body>
 </html>
