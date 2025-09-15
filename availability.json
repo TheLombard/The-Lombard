@@ -1,0 +1,24 @@
+{
+"units": [
+{
+"id": "2F",
+"name": "Unit 2F — Two Bedrooms",
+"status": "available",
+"rent": 1600,
+"deposit": 1600,
+"beds": 2,
+"baths": 1,
+"email": "manage@tebata.com"
+},
+{
+"id": "2R",
+"name": "Unit 2R — Studio",
+"status": "occupied",
+"rent": 1200,
+"deposit": 1200,
+"beds": 0,
+"baths": 1,
+"email": "manage@tebata.com"
+}
+]
+}
