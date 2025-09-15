@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Payment History — The Lombard</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.wrap{max-width:960px;margin:0 auto;padding:1rem;}
+table{width:100%;border-collapse:collapse;margin:.75rem 0 1rem}
+th,td{padding:.6rem .7rem;border-bottom:1px solid #e4e7ec;text-align:left}
+th{background:#f2f4f7;color:#344054}
+.filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:.5rem 0 1rem}
+.muted{color:#475467}
+select{padding:.35rem .6rem;border:1px solid #d0d5dd;border-radius:6px}
+</style>
+</head>
+<body>
 
+<header class="site-header">
+<div class="brand">
+<a class="logo" href="index.html">The Lombard</a>
+<div class="tag">Where You Belong</div>
+</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="documents.html">Documents</a>
+<a class="active" href="payments.html">Payments</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<main class="wrap">
+<h1>Payment History</h1>
+<p class="muted">This page lists payments once they’re posted. For corrections, email
+<a href="mailto:manage@tebata.com">manage@tebata.com</a>.
+</p>
+
+<div class="filters">
+<label for="unit">Filter by unit:</label>
+<select id="unit">
+<option value="all">All</option>
+<option value="2F">2F</option>
+<option value="2R">2R</option>
+</select>
+</div>
+
+<table id="payments">
+<thead>
+<tr>
+<th>Date</th>
+<th>Tenant</th>
+<th>Unit</th>
+<th>Method</th>
+<th>Amount</th>
+<th>Memo/Month</th>
+</tr>
+</thead>
+<tbody>
+<!-- Add rows here as payments are received -->
+<!-- Example rows: -->
+<tr data-unit="2F"><td>2025‑09‑01</td><td>Tenant A</td><td>2F</td><td>Zelle</td><td>$1,600.00</td><td>Oct 2025 Rent</td></tr>
+<tr data-unit="2R"><td>2025‑09‑01</td><td>Tenant B</td><td>2R</td><td>Zelle</td><td>$1,600.00</td><td>Oct 2025 Rent</td></tr>
+</tbody>
+</table>
+
+<script>
+const unitSel = document.getElementById('unit');
+const rows = Array.from(document.querySelectorAll('#payments tbody tr'));
+unitSel.addEventListener('change', () => {
+const val = unitSel.value;
+rows.forEach(r => {
+r.style.display = (val === 'all' || r.dataset.unit === val) ? '' : 'none';
+});
+});
+</script>
+</main>
+
+<footer class="site-footer">
+<div>© 2025 The Lombard • Managed by TEBATA Property Management</div>
+</footer>
+
+</body>
+</html>
